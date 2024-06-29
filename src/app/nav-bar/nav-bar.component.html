@@ -1,0 +1,36 @@
+<div class="nav-bar">
+  <div class="container">
+    <div class="box">
+      <div class="logo">
+        <img src="assets/feres.jpg">
+        FERES BABA
+      </div>
+      <ul class="list">
+        <li class="list-item"><a href="#profile">Profile</a> <div></div></li>
+        <li class="list-item"><a href="#education">Education</a> <div></div></li>
+        <li class="list-item"><a href="#skills">Skills</a> <div></div></li>
+        <li class="list-item"><a href="#projects">Projects</a> <div></div></li>
+        <li class="list-item"><a href="#experience">Experience & certifications</a> <div></div></li>
+      </ul>
+      <i class="bi bi-list" (click)="expand()"></i>
+    </div>
+  </div>
+</div>
+
+<div class="side-bar" [class.expanded]="expanded">
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        MENU
+      </div>
+      <i class="bi bi-x-lg" (click)="expand()" id="close-button"></i>
+    </div>
+    <ul class="side-list">
+      <li class="side-list-item" (click)="expand()"><a href="#profile">Profile</a> <div></div></li>
+      <li class="side-list-item" (click)="expand()"><a href="#education">Education</a> <div></div></li>
+      <li class="side-list-item" (click)="expand()"><a href="#skills">Skills</a> <div></div></li>
+      <li class="side-list-item" (click)="expand()"><a href="#projects">Projects</a> <div></div></li>
+      <li class="side-list-item" (click)="expand()"><a href="#experience">Experience & certifications</a> <div></div></li>
+    </ul>
+  </div>
+</div>

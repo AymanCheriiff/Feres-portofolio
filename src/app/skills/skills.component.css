@@ -1,0 +1,86 @@
+.skills {
+  min-height: 100vh;
+  height: fit-content;
+  background-image: url("../../assets/skills.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.title {
+  font-size: 73px;
+  font-weight: 300;
+  text-align: center;
+  color: #101820;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  top: 25%;
+}
+
+.my-skills {
+  height: fit-content;
+}
+
+.banner {
+  width: 100%;
+  height: fit-content;
+  min-height: 105vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  zoom: 80%;
+}
+
+.banner .slider {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
+}
+
+.banner .slider .item {
+  background-color: rgba(16, 24, 32, 0.02);
+  border-radius: 5px;
+  border: 1px solid #101820;
+  zoom: 100%;
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity) * 1deg))) translateZ(550px);
+}
+
+.banner .slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 950px) {
+  .banner{
+    zoom: 50%;
+  }
+}
